@@ -26,4 +26,15 @@
              '(true)
              #(and (first %) (second %))))))))
 
-
+(deftest test-p46-2
+  (testing "p46 true and nil"
+    (is (= (list
+            true nil nil
+            true true true
+            nil true nil
+            nil nil nil)
+           (flatten
+            (logic/l99-logic-table
+             '(true nil)
+             '(true nil)
+             #(and (first %) (second %))))))))
