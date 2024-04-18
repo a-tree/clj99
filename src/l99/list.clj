@@ -52,7 +52,7 @@
 (defn l99-flatten-list [lst]
   "P07"
   ;; (flatten lst))
-  (if (seq? lst)
+  (if (coll? lst)
     (if-not (empty? lst)
       (concat (l99-flatten-list (first lst))
               (l99-flatten-list (rest  lst))))
